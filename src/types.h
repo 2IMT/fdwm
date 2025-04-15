@@ -13,13 +13,19 @@ enum {
     NetWMName,
     NetWMState,
     NetWMCheck,
+    NetSystemTray,
+    NetSystemTrayOP,
+    NetSystemTrayOrientation,
+    NetSystemTrayOrientationHorz,
     NetWMFullscreen,
     NetActiveWindow,
     NetWMWindowType,
     NetWMWindowTypeDialog,
     NetClientList,
-    NetLast
+    NetLast,
 }; /* EWMH atoms */
+
+enum { Manager, Xembed, XembedInfo, XLast }; /* Xembed atoms */
 
 enum {
     WMProtocols,
@@ -113,5 +119,12 @@ typedef struct {
     int isfloating;
     int monitor;
 } Rule;
+
+typedef struct Systray Systray;
+
+struct Systray {
+    Window win;
+    Client* icons;
+};
 
 #endif
