@@ -1456,6 +1456,11 @@ void setup(void) {
     while (waitpid(-1, NULL, WNOHANG) > 0)
         ;
 
+    /* start actions */
+    for (size_t i = 0; i < sizeof(startactions)/sizeof(StartAction); i++) {
+        startactions[i].func(&startactions[i].arg);
+    }
+
     /* init screen */
     screen = DefaultScreen(dpy);
     sw = DisplayWidth(dpy, screen);

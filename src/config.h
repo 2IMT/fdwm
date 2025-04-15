@@ -112,6 +112,14 @@ static const Key keys[] = {
             TAGKEYS(XK_9, 8) { MODKEY | ShiftMask, XK_q, quit, { 0 } },
 };
 
+// autostart commands
+static const char* dunstcmd[] = { "dunst", NULL };
+
+// actions to perform on startup
+static const StartAction startactions[] = {
+    { spawn, {.v = dunstcmd } },
+};
+
 // button definitions
 // click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,
 // ClkClientWin, or ClkRootWin

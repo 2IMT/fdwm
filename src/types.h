@@ -86,6 +86,11 @@ typedef struct {
 } Key;
 
 typedef struct {
+    void (*func)(const Arg*);
+    const Arg arg;
+} StartAction;
+
+typedef struct {
     const char* symbol;
     void (*arrange)(Monitor*);
 } Layout;
