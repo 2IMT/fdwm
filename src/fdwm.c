@@ -1457,7 +1457,7 @@ void setup(void) {
         ;
 
     /* start actions */
-    for (size_t i = 0; i < sizeof(startactions)/sizeof(StartAction); i++) {
+    for (size_t i = 0; i < sizeof(startactions) / sizeof(StartAction); i++) {
         startactions[i].func(&startactions[i].arg);
     }
 
@@ -2169,7 +2169,8 @@ Monitor* systraytomon(Monitor* m) {
     }
     for (n = 1, t = mons; t && t->next; n++, t = t->next)
         ;
-    for (i = 1, t = mons; t && t->next && (unsigned int)i < systraypinning; i++, t = t->next)
+    for (i = 1, t = mons; t && t->next && (unsigned int)i < systraypinning;
+        i++, t = t->next)
         ;
     if (systraypinningfailfirst && (unsigned int)n < systraypinning)
         return mons;

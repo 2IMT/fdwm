@@ -117,7 +117,7 @@ static const char* dunstcmd[] = { "dunst", NULL };
 
 // actions to perform on startup
 static const StartAction startactions[] = {
-    { spawn, {.v = dunstcmd } },
+    { spawn, { .v = dunstcmd } },
 };
 
 // button definitions
