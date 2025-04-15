@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=fdwm
+Comment=Dynamic Window Manager
+Exec=@PREFIX@/bin/fdwm
+TryExec=@PREFIX@/bin/fdwm
+Icon=@ICON_PATH@
+Type=Application
+X-LightDM-DesktopName=fdwm
+DesktopNames=fdwm
+Keywords=tiling;wm;windowmanager;
